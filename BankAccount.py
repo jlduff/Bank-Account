@@ -11,8 +11,10 @@ def AccountNumRand():
     number = random.randint(10000000, 99999999)
     return number
 
+init_balance = 0
+
 def get_balance(self):
-    return f'Your current balance is ${self.balance}. Would you like to do anything else?'
+    return f'Your current balance is ${self.balance}. Would you like to do anything today?'
 
 def withdraw(self, amount):
     if self.balance >= amount:
@@ -35,4 +37,14 @@ def print_receipt(self, full_name, account_number, routing_number, balance):
 def add_interest(self):
     interest = self.balance *  0.00083 
     return interest
+
+routing_num = 349259085
+
+def print_receipt(self, full_name, routing_number, account_number, balance):
+    print(f"Name: {self.full_name}")
+    print(f"Routing Number: {self.routing_number}") 
+    print(f"Account Number: {self.account_number}")
+    print(f"Balance: ${self.balance}")
+
+
 
