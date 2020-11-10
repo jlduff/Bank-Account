@@ -11,6 +11,9 @@ def AccountNumRand():
     number = random.randint(10000000, 99999999)
     return number
 
+def get_balance(self):
+    return f'Your current balance is ${self.balance}. Would you like to do anything else?'
+
 def withdraw(self, amount):
     if self.balance >= amount:
         
@@ -20,8 +23,16 @@ def withdraw(self, amount):
         self.balance -= 10
         self.balance -= amount
 
-        return f"{self.full_name}, there are insufficient funds in your account. You will be charged an overdraft fee of $10. \n Your balance is now ${self.balance}"
+    return f"{self.full_name}, there are insufficient funds in your account. You will be charged an overdraft fee of $10. \n Your balance is now ${self.balance}"
 
 def deposit(self, amount):
-self.balance += amount 
-return f'You have deposited ${amount} into your account \n Your balance is now ${self.balance}'
+    self.balance += amount 
+    return f'You have deposited ${amount} into your account \n Your balance is now ${self.balance}'
+
+def print_receipt(self, full_name, account_number, routing_number, balance):
+    return self.balance
+
+def add_interest(self):
+    interest = self.balance *  0.00083 
+    return interest
+
