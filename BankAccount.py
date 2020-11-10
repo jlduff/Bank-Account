@@ -46,5 +46,14 @@ def print_receipt(self, full_name, routing_number, account_number, balance):
     print(f"Account Number: {self.account_number}")
     print(f"Balance: ${self.balance}")
 
+first_acc = BankAccount("Joe Schmoe", AccountNumRand(), init_balance, routing_number)
 
+first_acc.deposit(10000)
 
+first_acc.withdraw(4000)
+
+print(first_acc.get_balance())
+
+print(first_acc.add_interest())
+
+print(first_acc.print_receipt("Joe Schmoe", first_acc.account_number, routing_number, first_acc.get_balance()))
